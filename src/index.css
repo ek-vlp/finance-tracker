@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{--t1:#0f1a3d;--t2:#4a5885;--glass:rgba(255,255,255,.38);--bd:rgba(255,255,255,.7);--in:rgba(255,255,255,.5);--sh:rgba(60,80,200,.18);
+--g1:#cfe0ff;--g2:#8fb4ff;--g3:#6b7bff;--acc:#5b5bf0;--pos:#10b981;--neg:#ef4444;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--t1:#eef2ff;--t2:#a5b0d9;--glass:rgba(24,34,85,.45);--bd:rgba(150,170,255,.25);--in:rgba(10,16,50,.45);--sh:rgba(0,0,0,.4);--g1:#0b1233;--g2:#1a2a7a;--g3:#2b3fd0;--acc:#8b8bff}}
+:root[data-theme="dark"]{--t1:#eef2ff;--t2:#a5b0d9;--glass:rgba(24,34,85,.45);--bd:rgba(150,170,255,.25);--in:rgba(10,16,50,.45);--sh:rgba(0,0,0,.4);--g1:#0b1233;--g2:#1a2a7a;--g3:#2b3fd0;--acc:#8b8bff}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;color:var(--t1);font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+background:radial-gradient(1200px 600px at 10% -10%,var(--g1),transparent 60%),radial-gradient(900px 700px at 100% 100%,var(--g3),transparent 60%),linear-gradient(160deg,var(--g1),var(--g2));background-attachment:fixed}
+
+.glass{background:var(--glass);backdrop-filter:blur(20px) saturate(170%);-webkit-backdrop-filter:blur(20px) saturate(170%);border:1px solid var(--bd);border-radius:24px;box-shadow:0 10px 40px var(--sh),inset 0 1px 0 rgba(255,255,255,.5)}
+.inp{background:var(--in);border:1px solid var(--bd);border-radius:12px;padding:.55rem .75rem;color:var(--t1);width:100%;outline:none}
+.inp:focus{box-shadow:0 0 0 2px var(--acc)}
+.btn{background:linear-gradient(135deg,#5b5bf0,#6ea8ff);color:#fff;border-radius:12px;padding:.55rem 1rem;font-weight:600;box-shadow:0 6px 18px rgba(91,91,240,.4)}
+.nav{display:flex;gap:.6rem;align-items:center;padding:.6rem .8rem;border-radius:14px;color:var(--t2);font-weight:500;width:100%;text-align:left}
+.nav.on{background:var(--in);color:var(--acc);box-shadow:inset 0 0 0 1px var(--bd)}
+.mut{color:var(--t2)}
+option{color:#111}
